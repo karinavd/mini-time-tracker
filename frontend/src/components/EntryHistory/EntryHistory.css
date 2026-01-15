@@ -1,0 +1,212 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(58, 36, 28, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.modal__content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 600px; 
+  max-height: 90vh; 
+  overflow-y: auto; 
+  border: 1px solid var(--chaiMousse);
+  margin: auto; 
+  position: relative;
+}
+
+.history {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--chaiMousse);
+  margin: 20px 30px 0px 30px;
+  position: relative; 
+  z-index: 1; 
+}
+
+.history__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--bg-page);
+  padding-bottom: 1rem;
+  flex-wrap: wrap; 
+  gap: 1rem;
+}
+
+.history__tools {
+  display: flex;
+  align-items: center;
+}
+
+.history__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--boldBrew);
+  margin: 0;
+}
+
+.history__add-btn {
+  background-color: var(--boldBrew);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.history__add-btn:hover {
+  background-color: #2a1a14;
+  transform: scale(1.1);
+}
+
+.history__badge {
+  background-color: var(--boldBrew);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.history__empty {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-style: italic;
+}
+
+.history__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.date-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-page);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.date-nav__btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--boldBrew);
+  padding: 5px;
+  border-radius: 50%;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.date-nav__btn:hover:not(:disabled) {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.date-nav__btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.date-nav__info {
+  text-align: center;
+}
+
+.date-nav__current {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--boldBrew);
+  text-transform: capitalize;
+}
+
+.date-nav__counter {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: all 0.2s;
+  background: #fff;
+  cursor: pointer;
+}
+
+.entry:hover {
+  border-color: var(--chaiMousse);
+  background-color: #fafafa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.entry__content {
+  flex-grow: 1;
+}
+
+.entry__project {
+  font-weight: bold;
+  color: var(--boldBrew);
+  font-size: 1.05rem;
+}
+
+.entry__hours {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 2px 0;
+}
+
+.entry__desc {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+}
+
+.entry__delete-btn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 5px;
+  opacity: 0.6;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.entry__delete-btn:hover {
+  opacity: 1;
+  background-color: #fee2e2;
+}

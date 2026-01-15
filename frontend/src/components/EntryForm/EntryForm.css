@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --bg-page:#efe8dc;
+    --boldBrew: #3a241c;
+    --chaiMousse: #cbb4a0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:Arial, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--boldBrew);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0.4rem 1rem;
+}
+
+.container__header {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-family: Roboto;
+  font-weight: 700;
+}
+
+.container__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__layout {
+  display: grid;
+  gap: 1.5rem;
+  margin: 0 auto;
+  max-width: 800px;
+  grid-template-columns: 1fr;
+}
+
+
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--chaiMousse);
+}
+
+.card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.alert-success {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.alert-error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.form__label {
+  display: block;
+  font-weight: 600;
+  margin:1rem 0 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.form__hour{
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--chaiMousse);
+    padding: 0.1rem 0.8rem;
+     color: var(--boldBrew);
+}
+.form__date,
+.form__select,
+.form__textarea {
+  width: 100%;
+  padding: 0.75rem 0.8rem;
+  background-color: #f9fafb;
+  border: 1px solid var(--chaiMousse);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: var(--boldBrew);
+  box-sizing: border-box;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.form__textarea {
+  resize: vertical;
+  min-height: 100px;
+  color: var(--boldBrew);
+  min-width: 300px;
+}
+::placeholder {
+  color: var(--boldBrew);}
+.btn-save {
+  width: 100%;
+  padding: 0.875rem;
+ background-color: var(--boldBrew);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s, transform 0.1s;
+  margin-top: 1rem;
+}
+
+.btn-save:hover {
+  opacity: 0.9;
+}
