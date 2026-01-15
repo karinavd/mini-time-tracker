@@ -76,6 +76,6 @@ export const useEntryHistory = () => {
   };
 
   return {
-    entries,loading,uniqueDates,currentDateISO,currentDayEntries,grandTotal,dailyTotal,dateIndex,isFormVisible,entryToEdit,handleCreate,handleEdit,handleCloseForm,handleSaved,handleDelete,goPrev,goNext
+    entries,loading,grandTotal,uniqueDates,currentDateISO,currentDayEntries,dailyTotal,dateIndex,isFormVisible,entryToEdit,handleCreate,handleEdit,handleCloseForm,handleSaved,handleDelete,goPrev,goNext
   };
 };

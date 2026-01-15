@@ -1,4 +1,3 @@
-// frontend/src/hooks/useEntryForm.ts
 import { useEffect, useState } from 'react';
 import { createEntry, fetchProjects, updateEntry } from './entryService';
 import type { EntryFormData } from '../interfaces/EntryFormData';

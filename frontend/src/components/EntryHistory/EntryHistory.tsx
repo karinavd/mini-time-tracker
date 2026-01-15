@@ -9,7 +9,7 @@ import { formatDate, formatDuration } from '../../utils/timeUtils';
 import { useEntryHistory } from './useEntryHistory';
 
 const EntryHistory: React.FC = () => {
-  const { loading, uniqueDates, currentDateISO, currentDayEntries, dailyTotal, dateIndex, isFormVisible, entryToEdit, handleCreate, handleEdit, handleCloseForm, handleSaved, handleDelete, goPrev, goNext } = useEntryHistory();
+  const { loading, uniqueDates, currentDateISO, currentDayEntries,grandTotal, dailyTotal, dateIndex, isFormVisible, entryToEdit, handleCreate, handleEdit, handleCloseForm, handleSaved, handleDelete, goPrev, goNext } = useEntryHistory();
 
   if (loading && uniqueDates.length === 0) return <div className="history">Loading...</div>;
 
@@ -29,7 +29,10 @@ const EntryHistory: React.FC = () => {
              <h2 className="history__title">Entry History</h2>
              <button className="history__add-btn" onClick={handleCreate}><AddIcon fontSize="small" /></button>
           </div>
-          <div className="history__badge">Daily Total: {formatDuration(dailyTotal)}</div>
+          <div className="history__badge">Daily Total: {formatDuration(dailyTotal)}
+            <br />
+            Total for all time: {formatDuration(grandTotal)}
+          </div>
         </div>
 
         {uniqueDates.length === 0 ? <div className="history__empty">No entries yet</div> : (
